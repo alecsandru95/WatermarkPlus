@@ -109,15 +109,22 @@ namespace WatermarkPlusApp
 				return;
 			}
 
-			double waterScale = 1;
-			if(double.TryParse(_TxtWaterScale.Text, out waterScale) == false)
+			if(_TxtWaterScale.Text.Length != 0)
 			{
-				_Log.WriteWarning($"Watermark scale not valid : [{_TxtWaterScale.Text}], using default scale 0.5");
+				_TxtWaterScale.Text = _TxtWaterScale.Text.Replace(',', '.');
 			}
-			else
+
+			double waterScale = 0.5;
+			if (
+				string.IsNullOrWhiteSpace(_TxtWaterScale.Text) || 
+				double.TryParse(_TxtWaterScale.Text, out waterScale) == false
+				)
 			{
-				_TxtWaterScale.Text = waterScale.ToString();
+				waterScale = 0.5;
+				_Log.WriteWarning($"Watermark scale not valid : [{_TxtWaterScale.Text}], using default scale {waterScale}");
 			}
+
+			_TxtWaterScale.Text = waterScale.ToString();
 
 			_BtnProcessImages.IsEnabled = false;
 			_PrgWaterProcess.Value = 0;
