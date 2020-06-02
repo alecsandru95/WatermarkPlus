@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.779
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatermarkPlusApp", "WatermarkPlusApp\WatermarkPlusApp.csproj", "{ADF46EF3-E15E-47D2-9F63-5A19BE5AE3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatermarkPlus.Engine", "WatermarkPlus.Engine\WatermarkPlus.Engine.csproj", "{CDCAAC5C-4DFA-4916-88A2-11912D6CDF3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADF46EF3-E15E-47D2-9F63-5A19BE5AE3B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF46EF3-E15E-47D2-9F63-5A19BE5AE3B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF46EF3-E15E-47D2-9F63-5A19BE5AE3B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF46EF3-E15E-47D2-9F63-5A19BE5AE3B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDCAAC5C-4DFA-4916-88A2-11912D6CDF3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDCAAC5C-4DFA-4916-88A2-11912D6CDF3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDCAAC5C-4DFA-4916-88A2-11912D6CDF3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDCAAC5C-4DFA-4916-88A2-11912D6CDF3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AC013B7-61BD-495C-9874-86282F0C12F3}
+	EndGlobalSection
+EndGlobal

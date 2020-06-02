@@ -1,0 +1,82 @@
+﻿<Window x:Class="WatermarkPlusApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WatermarkPlusApp"
+        mc:Ignorable="d"
+        
+        Title="MainWindow" SizeToContent="Height" MinWidth="600" Width="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Name="_BtnInputFolder"
+                Grid.Column="0"
+                Grid.Row="0"
+                Content="Input Folder" 
+                Style="{DynamicResource ControlBaseStyle}"
+                Click="_BtnInputFolder_Click"/>
+        <TextBox Name="_TxtInputFolder"
+                     Grid.Column="1" Grid.ColumnSpan="2"
+                     Grid.Row="0"
+                     Style="{DynamicResource ControlBaseStyle}" />
+
+        <Button Name="_BtnInputWater"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Content="Input Watermark file" 
+                    Style="{DynamicResource ControlBaseStyle}"
+                    Click="_BtnInputWater_Click"/>
+        <TextBox Name="_TxtInputWater"
+                     Grid.Column="1" Grid.ColumnSpan="2"
+                     Grid.Row="1"
+                     Style="{DynamicResource ControlBaseStyle}" />
+
+        <Button Name="_BtnOutputFolder"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Content="Output Folder" 
+                    Style="{DynamicResource ControlBaseStyle}"
+                    Click="_BtnOutputFolder_Click"/>
+        <TextBox Name="_TxtOutputFolder"
+                 Grid.Column="1" Grid.ColumnSpan="2"
+                 Grid.Row="2"
+                 Style="{DynamicResource ControlBaseStyle}" />
+
+        <Label Grid.Column="0"
+                   Grid.Row="3"
+                   Content="Watermark scale" 
+                   Style="{DynamicResource ControlBaseStyle}"
+                   HorizontalContentAlignment="Right"/>
+        <TextBox Name="_TxtWaterScale"
+                 Grid.Column="1"
+                 Grid.Row="3"
+                 Style="{DynamicResource ControlBaseStyle}" />
+
+
+        <ProgressBar Name="_PrgWaterProcess"
+                         Grid.Column="0" Grid.ColumnSpan="2"
+                         Grid.Row="5"
+                         Margin="5" Maximum="1" Minimum="0" SmallChange="0.001" Value="0"/>
+        <Button Name="_BtnProcessImages"
+                    Grid.Column="2"
+                    Grid.Row="5"
+                    Content="Process images" 
+                    Style="{DynamicResource ControlBaseStyle}"
+                    Click="_BtnWork_Click"/>
+
+    </Grid>
+</Window>
